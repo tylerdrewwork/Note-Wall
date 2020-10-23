@@ -3,5 +3,5 @@ module.exports = function(sequelize, DataTypes) {
     text: DataTypes.STRING,
     views: DataTypes.INTEGER
   });
-  return NOTE;
+  return Note;
 };

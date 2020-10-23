@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "ABCabc123!!",
-    "database": "todolist",
+    "database": "notes_db",
     "host": "localhost",
     "port": 3306,
     "dialect": "mysql"
