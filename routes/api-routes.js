@@ -15,7 +15,14 @@ module.exports = function(app) {
 
 // POST route to create a new note
   app.post("/api/notes", function (req, res) {
+    console.log(req.body);
 
+    // Passing in object with text property
+    db.Note.create({
+      text: req.body.text
+    }).then(function(dbNotes) {
+      res.json(dbNotes);
+    })
   });
 
 }
