@@ -1,3 +1,12 @@
 body {
   background-color: #19183d;
 }
+
+#note-wall-container {
+  display: flexbox;
+  margin: 5% auto;
+  width: 70vw;
+  height: 65vh;
+  background-color: #9ba0b3;
+  border-radius: 25px;
+}

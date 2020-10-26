@@ -4,8 +4,19 @@ $clr-red: #C90A0D;
 $clr-navy: #19183d;
 $clr-blue: #2C11F2;
 $clr-cyan: #1ADBA8;
+$clr-beige: #9ba0b3;
 
 
 body {
     background-color: $clr-navy;
+}
+
+#note-wall-container {
+    display: flexbox;
+    margin: 5% auto;
+    width: 70vw;
+    height: 65vh;
+    
+    background-color: $clr-beige;
+    border-radius: 25px;
 }

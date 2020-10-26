@@ -15,8 +15,13 @@ var PORT = process.env.PORT || 8080;
 // Requiring our models for syncing
 var db = require("./models");
 
-// Use Handlebars as default engine
-app.engine('handlebars', exphbs());
+// Use Handlebars as default engine, and use helpers
+var hbsHelpers = exphbs.create({
+  helpers: require('./helpers/handlebars.js').helpers,
+  extname: '.handlebars',
+});
+
+app.engine('handlebars', hbsHelpers.engine);
 app.set('view engine', 'handlebars');
 
 // Sets up the Express app to handle data parsing
