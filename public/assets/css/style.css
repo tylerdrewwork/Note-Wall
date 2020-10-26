@@ -3,10 +3,23 @@ body {
 }
 
 #note-wall-container {
-  display: flexbox;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
   margin: 5% auto;
   width: 70vw;
   height: 65vh;
   background-color: #9ba0b3;
   border-radius: 25px;
+}
+#note-wall-container .wallnote {
+  flex-shrink: 0;
+  margin: 5px;
+  position: relative;
+  height: auto;
+  padding-top: 10%;
+  width: 10%;
+  background-color: #C90A0D;
+  border-radius: 100%;
 }

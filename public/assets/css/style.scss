@@ -12,11 +12,28 @@ body {
 }
 
 #note-wall-container {
-    display: flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
     margin: 5% auto;
     width: 70vw;
     height: 65vh;
     
     background-color: $clr-beige;
     border-radius: 25px;
+
+    .wallnote {
+        // flex-basis: auto;
+        flex-shrink: 0;
+        margin: 5px;
+        position: relative;
+
+        height: auto;
+        padding-top: 10%; // Padding top needs to be the same as width to keep the circle shape. See here: https://css-tricks.com/forums/topic/css-responsive-circles/
+        width: 10%;
+        background-color: $clr-red;
+        border-radius: 100%;
+    }
 }
