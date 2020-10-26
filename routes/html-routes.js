@@ -8,7 +8,8 @@ module.exports = function(app) {
 
     // base index route
     app.get("/", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/boilerplate.html"));
+        res.render("index");
+        // res.sendFile(path.join(__dirname, "../public/boilerplate.html"));
         
       });
     };

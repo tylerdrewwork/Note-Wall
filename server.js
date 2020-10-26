@@ -5,6 +5,7 @@
 // *** Dependencies
 // =============================================================
 var express = require("express");
+var exphbs = require("express-handlebars");
 
 // Sets up the Express App
 // =============================================================
@@ -13,6 +14,10 @@ var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");
+
+// Use Handlebars as default engine
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
