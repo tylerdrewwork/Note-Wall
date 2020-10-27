@@ -13,15 +13,15 @@ module.exports = function(app) {
 
   });
 
-   // Get route for retrieving a single post
+   // Get route for retrieving a single note
    app.get("/api/notes/:id", function(req, res) {
-    db.Post.findOne({
+    db.Note.findOne({
       where: {
         id: req.params.id
       }
     })
-      .then(function(dbPost) {
-        res.json(dbPost);
+      .then(function(dbNotes) {
+        res.json(dbNotes);
       });
   });
 
