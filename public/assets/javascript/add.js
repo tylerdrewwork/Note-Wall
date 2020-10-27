@@ -9,5 +9,7 @@ $("#add-btn").on("click", function(event) {
         text: $("#text").val().trim(),
         views: $("#views").val().trim(),
         author_id: $("author_id").val().trim()
-    }
+    };
+
+// Sending AJAX Post request of newNote object
 })
