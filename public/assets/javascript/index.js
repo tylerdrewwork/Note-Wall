@@ -22,10 +22,14 @@ $(document).ready(function() {
         // Render notes onto the note wall
         for (let i = 0; i < numberOfNotesToDisplay; i++) {
             // $("#note-wall-container").append(`<div class="wallnote"></div>`);
-            $("#note-wall-container").append(`<img class="wallnote" src="assets/svg/sticky_note.svg" alt="note"></img>`);
+            $("#note-wall-container").append(`<img class="wallnote" src="assets/svg/sticky_note.svg" alt="note" onclick="openNote()"></img>`);
            
         }
     }
 
     init();
 });
+
+function openNote() {
+    console.log("Opening note... ");
+}
