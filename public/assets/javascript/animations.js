@@ -1,7 +1,7 @@
 // This is the actual animation. You can reference noteOpen to run animation methods
 const noteOpenAnim = anime({
-    targets: '#note-new-form',
-    translateY: -270,
+    targets: '#note-new-form-container',
+    translateY: '-50vh',
     opacity: 1,
     autoplay: false,
     easing: 'cubicBezier(0.415, 0.815, 0.600, 0.875)',

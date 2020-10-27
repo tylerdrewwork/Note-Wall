@@ -9,6 +9,9 @@ $clr-beige: #9ba0b3;
 
 body {
     background-color: $clr-navy;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
 
 #note-wall-container {
@@ -43,16 +46,28 @@ body {
     }
 }
 
-#note-new-form {
+#note-new-form-container {
+    // This will make the form absolute, and center position it
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100vh;
     margin: auto;
-    height: 40vh;
-    width: 40vw;
-    background-color: $clr-red;
-    border: $clr-navy 2px solid;
-    border-radius: 10px;
     opacity: 0;
 
-    #note-new__exit {
-
+    #note-new-form {    
+        position: relative;
+        margin: auto;
+        top: -20vh;
+        height: 40vh;
+        width: 40vw;
+        background-color: $clr-red;
+        border: $clr-navy 2px solid;
+        border-radius: 10px;
+        opacity: 1;
+    
+        #note-new__exit {
+    
+        }
     }
 }

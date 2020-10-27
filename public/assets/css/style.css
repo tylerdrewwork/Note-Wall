@@ -1,5 +1,8 @@
 body {
   background-color: #19183d;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
 }
 
 #note-wall-container {
@@ -26,12 +29,22 @@ body {
   cursor: pointer;
 }
 
-#note-new-form {
+#note-new-form-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100vh;
   margin: auto;
+  opacity: 0;
+}
+#note-new-form-container #note-new-form {
+  position: relative;
+  margin: auto;
+  top: -20vh;
   height: 40vh;
   width: 40vw;
   background-color: #C90A0D;
   border: #19183d 2px solid;
   border-radius: 10px;
-  opacity: 0;
+  opacity: 1;
 }
