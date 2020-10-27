@@ -6,7 +6,8 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: flex-start;
+  justify-content: space-around;
+  align-content: space-around;
   margin: 5% auto;
   width: 70vw;
   height: 65vh;
@@ -14,7 +15,7 @@ body {
   border-radius: 25px;
 }
 #note-wall-container .wallnote {
-  flex-shrink: 0;
+  flex-shrink: 1;
   margin: 5px;
   position: relative;
   height: auto;
