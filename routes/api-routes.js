@@ -1,13 +1,15 @@
 const db = require("../models");
-
+const Sequelize = require("sequelize");
 
 // Routes
 
-// GET route to get all notes
+// GET route to get random notes.  Returns dbNotes, which is an array of 20 random notes pulled from the database. 
 module.exports = function(app) {
   app.get("/api/notes", function(req, res) {
     // Finding all entries to the tables when used with no options
-    db.Note.findAll({}).then(function(dbNotes) {
+    db.Note.findAll({
+      order: Sequelize.literal('rand()'), limit: 20
+    }).then(function(dbNotes) {
       res.json(dbNotes);
     });
 
