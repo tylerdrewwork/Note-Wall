@@ -4,8 +4,40 @@ $clr-red: #C90A0D;
 $clr-navy: #19183d;
 $clr-blue: #2C11F2;
 $clr-cyan: #1ADBA8;
+$clr-beige: #9ba0b3;
 
 
 body {
     background-color: $clr-navy;
+}
+
+#note-wall-container {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+
+    @media only screen and (max-width: 425px) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    margin: 5% auto;
+    width: 70vw;
+    height: 65vh;
+    
+    background-color: $clr-beige;
+    border-radius: 25px;
+
+    .wallnote {
+        margin: auto 1vw;
+        position: relative;
+        width: min(70px, 10vw);
+
+        // The following code was for the hole that the note was going to be in:
+        // height: auto;
+        // padding-top: min(70px, 10vw); // Padding top needs to be the same as width to keep the circle shape. See here: https://css-tricks.com/forums/topic/css-responsive-circles/
+        // background-color: $clr-red;
+        // border-radius: 100%;
+    }
 }

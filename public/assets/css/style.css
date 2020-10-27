@@ -1,3 +1,26 @@
 body {
   background-color: #19183d;
 }
+
+#note-wall-container {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  margin: 5% auto;
+  width: 70vw;
+  height: 65vh;
+  background-color: #9ba0b3;
+  border-radius: 25px;
+}
+@media only screen and (max-width: 425px) {
+  #note-wall-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+#note-wall-container .wallnote {
+  margin: auto 1vw;
+  position: relative;
+  width: min(70px, 10vw);
+}
