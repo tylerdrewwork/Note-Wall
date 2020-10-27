@@ -13,4 +13,4 @@ module.exports = function(sequelize, DataTypes) {
   return Note;
 };
 
-Note.sync();
+// Note.sync();
