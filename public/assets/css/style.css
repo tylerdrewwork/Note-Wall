@@ -27,8 +27,11 @@ body {
 }
 
 #note-new-form {
-  height: 100px;
-  width: 100px;
+  margin: auto;
+  height: 40vh;
+  width: 40vw;
   background-color: #C90A0D;
+  border: #19183d 2px solid;
+  border-radius: 10px;
   opacity: 0;
 }

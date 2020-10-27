@@ -44,8 +44,15 @@ body {
 }
 
 #note-new-form {
-    height: 100px;
-    width: 100px;
+    margin: auto;
+    height: 40vh;
+    width: 40vw;
     background-color: $clr-red;
+    border: $clr-navy 2px solid;
+    border-radius: 10px;
     opacity: 0;
+
+    #note-new__exit {
+
+    }
 }
