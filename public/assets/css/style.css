@@ -22,9 +22,5 @@ body {
 #note-wall-container .wallnote {
   margin: auto 1vw;
   position: relative;
-  height: auto;
-  padding-top: min(70px, 10vw);
   width: min(70px, 10vw);
-  background-color: #C90A0D;
-  border-radius: 100%;
 }
