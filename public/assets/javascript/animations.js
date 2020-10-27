@@ -4,6 +4,8 @@ const noteOpenAnim = anime({
     translateY: -270,
     opacity: 1,
     autoplay: false,
+    easing: 'cubicBezier(0.415, 0.815, 0.600, 0.875)',
+    duration: 400,
     begin: function(anim) {
         isNoteOpenAnimCompleted = false;
     },
