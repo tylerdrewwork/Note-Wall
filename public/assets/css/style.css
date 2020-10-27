@@ -25,3 +25,10 @@ body {
   width: min(70px, 10vw);
   cursor: pointer;
 }
+
+#note-new-form {
+  height: 100px;
+  width: 100px;
+  background-color: #C90A0D;
+  opacity: 0;
+}

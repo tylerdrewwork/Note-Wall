@@ -42,3 +42,10 @@ body {
         // border-radius: 100%;
     }
 }
+
+#note-new-form {
+    height: 100px;
+    width: 100px;
+    background-color: $clr-red;
+    opacity: 0;
+}
