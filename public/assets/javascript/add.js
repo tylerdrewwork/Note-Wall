@@ -12,4 +12,8 @@ $("#add-btn").on("click", function(event) {
     };
 
 // Sending AJAX Post request of newNote object
+    $.post("api/new", newNote)
+    .then(function(data) {
+        console.log(data);
+    });
 })
