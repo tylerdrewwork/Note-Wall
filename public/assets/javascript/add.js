@@ -21,4 +21,4 @@ $("#add-btn").on("click", function(event) {
     $("#text").val("");
     $("#views").val("");
     $("author_id").val("");
-})
+});
