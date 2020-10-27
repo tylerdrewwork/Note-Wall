@@ -12,7 +12,15 @@ module.exports = function(app) {
     }).then(function(dbNotes) {
       res.json(dbNotes);
     });
+  });
 
+  // Returns total number of notes in database
+  app.get("/", function(req, res) {
+    db.Note.count({
+      col: 'id'
+    }).then(function(count) {
+      res.json(count);
+    });
   });
 
    // Get route for retrieving a single note
