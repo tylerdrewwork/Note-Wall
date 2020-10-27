@@ -16,4 +16,9 @@ $("#add-btn").on("click", function(event) {
     .then(function(data) {
         console.log(data);
     });
+
+// Empties out each input box by replacing value with empty string
+    $("#text").val("");
+    $("#views").val("");
+    $("author_id").val("");
 })
