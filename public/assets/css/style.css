@@ -3,24 +3,28 @@ body {
 }
 
 #note-wall-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: space-around;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
   margin: 5% auto;
   width: 70vw;
   height: 65vh;
   background-color: #9ba0b3;
   border-radius: 25px;
 }
+@media only screen and (max-width: 425px) {
+  #note-wall-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
 #note-wall-container .wallnote {
-  flex-shrink: 1;
-  margin: 5px;
+  margin: auto 1vw;
   position: relative;
   height: auto;
-  padding-top: 10%;
-  width: 10%;
+  padding-top: min(70px, 10vw);
+  width: min(70px, 10vw);
   background-color: #C90A0D;
   border-radius: 100%;
 }

@@ -12,11 +12,15 @@ body {
 }
 
 #note-wall-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+
+    @media only screen and (max-width: 425px) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
 
     margin: 5% auto;
     width: 70vw;
@@ -26,14 +30,13 @@ body {
     border-radius: 25px;
 
     .wallnote {
-        // flex-basis: auto;
-        flex-shrink: 1;
-        margin: 5px;
+        margin: auto 1vw;
         position: relative;
 
         height: auto;
-        padding-top: 10%; // Padding top needs to be the same as width to keep the circle shape. See here: https://css-tricks.com/forums/topic/css-responsive-circles/
-        width: 10%;
+        padding-top: min(70px, 10vw); // Padding top needs to be the same as width to keep the circle shape. See here: https://css-tricks.com/forums/topic/css-responsive-circles/
+        width: min(70px, 10vw);
+
         background-color: $clr-red;
         border-radius: 100%;
     }
