@@ -13,6 +13,18 @@ module.exports = function(app) {
 
   });
 
+   // Get route for retrieving a single note
+   app.get("/api/notes/:id", function(req, res) {
+    db.Note.findOne({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(function(dbNotes) {
+        res.json(dbNotes);
+      });
+  });
+
 // POST route to create a new note
   app.post("/api/notes", function (req, res) {
     console.log(req.body);
