@@ -1,6 +1,6 @@
-// This is the actual animation. You can reference noteOpen to run animation methods
+// This is the actual animation. You can reference noteOpenAnim to run animation methods
 const noteOpenAnim = anime({
-    targets: '#note-new-form-container',
+    targets: '#note-container',
     translateY: '-50vh',
     opacity: 1,
     autoplay: false,
@@ -16,14 +16,14 @@ const noteOpenAnim = anime({
 // This prevents us from running the animation multiple times until it's finished
 let isNoteOpenAnimCompleted = true;
 
-function openNote() {
+function openNoteAnim() {
     if (!isNoteOpenAnimCompleted) return; // If it's not completed, then return and do nothing
     console.log("Opening note... ");
     noteOpenAnim.direction = "normal";
     noteOpenAnim.play();
 }
 
-function closeNote() {
+function closeNoteAnim() {
     if (!isNoteOpenAnimCompleted) return; // If it's not completed, then return and do nothing
     noteOpenAnim.direction = "reverse";
     noteOpenAnim.play();
