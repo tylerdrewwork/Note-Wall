@@ -27,7 +27,12 @@ $(document).ready(function() {
         }
     }
 
+    function GetAmountOfNotesInDatabase() {
+        // ajax query to api/notes/count
+    }
+
     AddNotesToPage();
+    GetAmountOfNotesInDatabase();
 });
 
 function showNewNoteForm() {
@@ -36,4 +41,6 @@ function showNewNoteForm() {
 
 function showNote() {
     openNoteAnim();
+    // dod something stupid
+
 }
