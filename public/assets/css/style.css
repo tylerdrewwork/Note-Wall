@@ -1,5 +1,8 @@
 body {
   background-color: #19183d;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
 }
 
 #note-wall-container {
@@ -23,4 +26,25 @@ body {
   margin: auto 1vw;
   position: relative;
   width: min(70px, 10vw);
+  cursor: pointer;
+}
+
+#note-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100vh;
+  margin: auto;
+  opacity: 0;
+}
+#note-container #note-display {
+  position: relative;
+  margin: auto;
+  top: -20vh;
+  height: 40vh;
+  width: 40vw;
+  background-color: #edeee4;
+  border: #19183d 2px solid;
+  border-radius: 10px;
+  opacity: 1;
 }

@@ -5,10 +5,14 @@ $clr-navy: #19183d;
 $clr-blue: #2C11F2;
 $clr-cyan: #1ADBA8;
 $clr-beige: #9ba0b3;
+$clr-paper: #edeee4;
 
 
 body {
     background-color: $clr-navy;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
 
 #note-wall-container {
@@ -33,11 +37,39 @@ body {
         margin: auto 1vw;
         position: relative;
         width: min(70px, 10vw);
+        cursor: pointer;
 
         // The following code was for the hole that the note was going to be in:
         // height: auto;
         // padding-top: min(70px, 10vw); // Padding top needs to be the same as width to keep the circle shape. See here: https://css-tricks.com/forums/topic/css-responsive-circles/
         // background-color: $clr-red;
         // border-radius: 100%;
+    }
+}
+
+#note-container {
+    // This will make the form absolute, and center position it
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100vh;
+    margin: auto;
+    opacity: 0;
+
+    #note-btn-exit {
+
+    }
+    
+    #note-display {    
+        position: relative;
+        margin: auto;
+        top: -20vh;
+        height: 40vh;
+        width: 40vw;
+        background-color: $clr-paper;
+        border: $clr-navy 2px solid;
+        border-radius: 10px;
+        opacity: 1;
+    
     }
 }

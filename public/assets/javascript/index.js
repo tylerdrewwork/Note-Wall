@@ -5,7 +5,7 @@ const notesToDisplayOnDesktop = 20;
 
 // Run on page load is finished
 $(document).ready(function() {
-    function init() {
+    function AddNotesToPage() {
         let numberOfNotesToDisplay;
 
         // Check to see if the screen width is larger or smaller than mobileSizeInPx
@@ -22,10 +22,25 @@ $(document).ready(function() {
         // Render notes onto the note wall
         for (let i = 0; i < numberOfNotesToDisplay; i++) {
             // $("#note-wall-container").append(`<div class="wallnote"></div>`);
-            $("#note-wall-container").append(`<img class="wallnote" src="assets/svg/sticky_note.svg" alt="note"></img>`);
+            $("#note-wall-container").append(`<img class="wallnote" src="assets/svg/sticky_note.svg" alt="note" onclick="showNote()"></img>`);
            
         }
     }
 
-    init();
+    function GetAmountOfNotesInDatabase() {
+        // ajax query to api/notes/count
+    }
+
+    AddNotesToPage();
+    GetAmountOfNotesInDatabase();
 });
+
+function showNewNoteForm() {
+    // $("#note-display__new");
+}
+
+function showNote() {
+    openNoteAnim();
+    // dod something stupid
+
+}
