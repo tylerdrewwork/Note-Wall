@@ -15,7 +15,7 @@ module.exports = function(app) {
   });
 
   // Returns total number of notes in database
-  app.get("/", function(req, res) {
+  app.get("/api/notes/count", function(req, res) {
     db.Note.count({
       col: 'id'
     }).then(function(count) {

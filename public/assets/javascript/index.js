@@ -5,7 +5,7 @@ const notesToDisplayOnDesktop = 20;
 
 // Run on page load is finished
 $(document).ready(function() {
-    function AddNotesToPage() {
+    function addNotesToPage() {
         let numberOfNotesToDisplay;
 
         // Check to see if the screen width is larger or smaller than mobileSizeInPx
@@ -19,20 +19,32 @@ $(document).ready(function() {
             numberOfNotesToDisplay = notesToDisplayOnDesktop;
         }
 
-        // Render notes onto the note wall
-        for (let i = 0; i < numberOfNotesToDisplay; i++) {
+        // creates random notes from the database
+        function displayNotes() {
+            // ajax to load an array of random notes
+            $.get("api/notes", function(data) {
+                //randomNotes is an array
+                let randomNotes = data;
+        
+                // Render notes onto the note wall
+                for (let i = 0; i < numberOfNotesToDisplay; i++) {
             // $("#note-wall-container").append(`<div class="wallnote"></div>`);
-            $("#note-wall-container").append(`<img class="wallnote" src="assets/svg/sticky_note.svg" alt="note" onclick="showNote()"></img>`);
-           
+                $("#note-wall-container").append(`<img class="wallnote" data-note-id=${randomNotes[i].id} src="assets/svg/sticky_note.svg" alt="note" onclick="showNote()"></img>`);           
+                }
+            }); 
         }
-    }
-
-    function GetAmountOfNotesInDatabase() {
+        displayNotes();
+}
+    function getAmountOfNotesInDatabase() {
         // ajax query to api/notes/count
+        $.get("api/notes/count", function(data) {
+            let numberOfNotes = data;
+            return numberOfNotes;
+        })
     }
 
-    AddNotesToPage();
-    GetAmountOfNotesInDatabase();
+    addNotesToPage();
+    getAmountOfNotesInDatabase();
 });
 
 function showNewNoteForm() {
