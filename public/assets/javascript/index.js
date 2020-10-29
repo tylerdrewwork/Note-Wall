@@ -60,8 +60,7 @@ function showNote() {
     $("#modal-views").text(data.views);
     $("#modal-text").text(data.text);
     openNoteAnim();
-    }
-    )
+    })
 
 }
 
