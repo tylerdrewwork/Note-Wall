@@ -56,7 +56,7 @@ function showNote() {
     let noteId = $(this).data("note-id");
     
     $.get(`api/notes/${noteId}`, function(data) {
-    console.log(data.views);
+
     $("#modal-views").text(data.views);
     $("#modal-text").text(data.text);
     openNoteAnim();
