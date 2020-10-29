@@ -29,7 +29,7 @@ $(document).ready(function() {
                 // Render notes onto the note wall
                 for (let i = 0; i < numberOfNotesToDisplay; i++) {
             // $("#note-wall-container").append(`<div class="wallnote"></div>`);
-                $("#note-wall-container").append(`<img class="wallnote" data-note-id=${randomNotes[i].id} src="assets/svg/sticky_note.svg" alt="note" onclick="showNote()"></img>`);           
+                $("#note-wall-container").append(`<img class="wallnote" data-note-id=${randomNotes[i].id} src="assets/svg/sticky_note.svg" alt="note"></img>`);           
                 }
             }); 
         }
@@ -52,7 +52,16 @@ function showNewNoteForm() {
 }
 
 function showNote() {
+    
+    let noteId = $(this).data("note-id");
+    
+    $.get(`api/notes/${noteId}`, function(data) {
+
+    $("#modal-views").text(data.views);
+    $("#modal-text").text(data.text);
     openNoteAnim();
-    // dod something stupid
+    })
 
 }
+
+$("body").on("click", ".wallnote", showNote);
