@@ -29,7 +29,7 @@ body {
   cursor: pointer;
 }
 
-#note-container {
+#note-modal {
   position: absolute;
   left: 0;
   right: 0;
@@ -37,7 +37,7 @@ body {
   margin: auto;
   opacity: 0;
 }
-#note-container #note-display {
+#note-modal #note-display {
   position: relative;
   margin: auto;
   top: -20vh;
