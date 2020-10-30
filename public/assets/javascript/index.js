@@ -39,13 +39,13 @@ $(document).ready(function() {
         // ajax query to api/notes/count
         $.get("api/notes/count", function(data) {
             let numberOfNotes = data;
-            return numberOfNotes;
+            $("#total-notes").append(numberOfNotes);
         })
     }
 
     addNotesToPage();
     getAmountOfNotesInDatabase();
-});
+
 
 function showNewNoteForm() {
     // $("#modal-read");
@@ -80,3 +80,5 @@ function reloadPage() {
 $("body").on("click", ".wallnote", showNote);
 $("body").on("click", "#create-note", showCreateNoteModal);
 $("body").on("click", "#more-notes", reloadPage);
+
+});
