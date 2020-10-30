@@ -16,6 +16,11 @@ const noteOpenAnim = anime({
 // This prevents us from running the animation multiple times until it's finished
 let isNoteOpenAnimCompleted = true;
 
+
+//
+// Functions
+//
+
 function openNoteAnim() {
     if (!isNoteOpenAnimCompleted) return; // If it's not completed, then return and do nothing
     console.log("Opening note... ");
@@ -27,4 +32,19 @@ function closeNoteAnim() {
     if (!isNoteOpenAnimCompleted) return; // If it's not completed, then return and do nothing
     noteOpenAnim.direction = "reverse";
     noteOpenAnim.play();
+}
+
+function initialNoteRenderAnim() {
+    let notes = document.querySelectorAll('.wallnote');
+    console.log("notes: ", notes);
+    anime({
+        targets: notes,
+        opacity: 0,
+        // delay: anime.stagger(200),
+    });
+    anime({
+        targets: "#create-note",
+        opacity: 0,
+        // delay: anime.stagger(200),
+    });
 }

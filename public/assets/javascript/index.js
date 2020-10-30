@@ -28,10 +28,14 @@ $(document).ready(function() {
         
                 // Render notes onto the note wall
                 for (let i = 0; i < numberOfNotesToDisplay; i++) {
-            // $("#note-wall-container").append(`<div class="wallnote"></div>`);
-                $("#note-wall-container").append(`<img class="wallnote" data-note-id=${randomNotes[i].id} src="assets/svg/sticky_note.svg" alt="note"></img>`);           
+                    // $("#note-wall-container").append(`<div class="wallnote"></div>`);
+                    if(randomNotes[i] == undefined) {break}; // Break if there aren't enough notes to display on page
+                    $("#note-wall-container").append(`<img class="wallnote" data-note-id=${randomNotes[i].id} src="assets/svg/sticky_note.svg" alt="note"></img>`);           
                 }
+                // after done rendering notes, play Initial Note Animation
+                initialNoteRenderAnim();
             }); 
+
         }
         displayNotes();
 }
@@ -46,6 +50,7 @@ $(document).ready(function() {
     addNotesToPage();
     getAmountOfNotesInDatabase();
 });
+// END OF "RUN ON PAGE LOAD FINISH"
 
 function showNewNoteForm() {
     // $("#modal-read");
