@@ -48,7 +48,7 @@ $(document).ready(function() {
 });
 
 function showNewNoteForm() {
-    // $("#note-display__new");
+    // $("#modal-read");
 }
 
 function showNote() {
@@ -61,7 +61,11 @@ function showNote() {
     $("#modal-text").text(data.text);
     openNoteAnim();
     })
+}
 
+function showCreateNoteModal() {
+    
 }
 
 $("body").on("click", ".wallnote", showNote);
+$("body").on("click", "#create-button", showCreateNoteModal)
