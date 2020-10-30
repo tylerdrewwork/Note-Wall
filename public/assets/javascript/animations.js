@@ -34,7 +34,9 @@ function closeNoteAnim() {
     noteOpenAnim.play();
 }
 
+// This is what makes the notes look really good as they load onto the page
 function initialNoteRenderAnim() {
+    $('.wallnote').css("opacity", 0);
     $('.wallnote').css("opacity", 0);
 
     anime({

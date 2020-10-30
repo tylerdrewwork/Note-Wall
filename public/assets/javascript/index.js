@@ -30,7 +30,7 @@ $(document).ready(function() {
                 for (let i = 0; i < numberOfNotesToDisplay; i++) {
                     // $("#note-wall-container").append(`<div class="wallnote"></div>`);
                     if(randomNotes[i] == undefined) {break}; // Break if there aren't enough notes to display on page
-                    $("#note-wall-container").append(`<img class="wallnote" data-note-id=${randomNotes[i].id} src="assets/svg/sticky_note.svg" alt="note"></img>`);           
+                    $("#note-wall-container").append(`<div class="wallnote"><img data-note-id=${randomNotes[i].id} src="assets/svg/sticky_note.svg" alt="note"></img></div>`);           
                 }
                 // after done rendering notes, play Initial Note Animation
                 initialNoteRenderAnim();
