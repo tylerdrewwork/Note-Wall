@@ -15,6 +15,7 @@ const modalOpenAnim = anime({
     opacity: 1,
     autoplay: false,
     easing: 'cubicBezier(0.415, 0.815, 0.600, 0.875)',
+    delay: 400,
     duration: 400,
     begin: function(anim) {
         isNoteOpenAnimCompleted = false;
@@ -24,14 +25,6 @@ const modalOpenAnim = anime({
     },
 });
 
-const removeNoteFromWallAnim = anime({
-    targets: noteThatIsCurrentlyOpen,
-    opacity: 0,
-    autoplay: false,
-    easing: 'linear',
-    duration: 400,
-})
-
 //
 // Functions
 //
@@ -40,6 +33,27 @@ function openModalAnim(noteId) {
     if (!isNoteOpenAnimCompleted) return; // If it's not completed, then return and do nothing
     
     // Add note to board if we're currently holding one
+    putNoteOnBoardAnim();
+    
+    // Remove note from board
+    noteThatIsCurrentlyOpen = document.querySelectorAll(`[data-note-id='${noteId}']`);
+    takeNoteOffBoardAnim();
+
+    // Open Modal
+    modalOpenAnim.direction = "normal";
+    modalOpenAnim.play();
+}
+
+function takeNoteOffBoardAnim() {
+    anime({
+        targets: noteThatIsCurrentlyOpen,
+        opacity: 0,
+        easing: 'linear',
+        duration: 400,
+    });
+}
+
+function putNoteOnBoardAnim() {
     if (noteThatIsCurrentlyOpen) {
         anime({
             targets: noteThatIsCurrentlyOpen,
@@ -47,24 +61,12 @@ function openModalAnim(noteId) {
             easing: 'linear',
             duration: 400,
         })
-    }
-    
-    // Remove note from board
-    noteThatIsCurrentlyOpen = document.querySelectorAll(`[data-note-id='${noteId}']`);
-    anime({
-        targets: noteThatIsCurrentlyOpen,
-        opacity: 0,
-        easing: 'linear',
-        duration: 400,
-    })
-
-    // Open Modal
-    modalOpenAnim.direction = "normal";
-    modalOpenAnim.play();
+    };
 }
 
 function closeModalAnim() {
     if (!isNoteOpenAnimCompleted) return; // If it's not completed, then return and do nothing
+    putNoteOnBoardAnim();
     modalOpenAnim.direction = "reverse";
     modalOpenAnim.play();
 }
