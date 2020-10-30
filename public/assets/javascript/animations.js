@@ -1,6 +1,6 @@
 // This is the actual animation. You can reference noteOpenAnim to run animation methods
-const noteOpenAnim = anime({
-    targets: '#note-modal',
+const modalOpenAnim = anime({
+    targets: '#modal-wrapper',
     translateY: '-50vh',
     opacity: 1,
     autoplay: false,
@@ -13,6 +13,10 @@ const noteOpenAnim = anime({
         isNoteOpenAnimCompleted = true;
     },
 })
+
+const removeNoteFromWallAnim = anime({
+    targets: ''
+})
 // This prevents us from running the animation multiple times until it's finished
 let isNoteOpenAnimCompleted = true;
 
@@ -21,17 +25,17 @@ let isNoteOpenAnimCompleted = true;
 // Functions
 //
 
-function openNoteAnim() {
+function openModalAnim(noteId) {
     if (!isNoteOpenAnimCompleted) return; // If it's not completed, then return and do nothing
     console.log("Opening note... ");
-    noteOpenAnim.direction = "normal";
-    noteOpenAnim.play();
+    modalOpenAnim.direction = "normal";
+    modalOpenAnim.play();
 }
 
-function closeNoteAnim() {
+function closeModalAnim() {
     if (!isNoteOpenAnimCompleted) return; // If it's not completed, then return and do nothing
-    noteOpenAnim.direction = "reverse";
-    noteOpenAnim.play();
+    modalOpenAnim.direction = "reverse";
+    modalOpenAnim.play();
 }
 
 // This is what makes the notes look really good as they load onto the page
@@ -44,21 +48,31 @@ function initialNoteRenderAnim() {
         opacity: 1,
         duration: 2500,
         easing: 'linear',
-        delay: anime.stagger(50),
+        delay: anime.stagger(100),
     });
 
     // Change Size as if falling in
     anime({
         targets: '.wallnote img',
-        left: () => {
-            return anime.random(-15, 15);
-        },
         rotate: function () {
             return anime.random(-25, 25);
         },
         scale: [2, 1],
         easing: 'linear',
         duration: 2500,
-        delay: anime.stagger(50),
+        delay: anime.stagger(100),
     });
+
+    anime({
+        targets: '.wallnote img',
+        left: () => {
+            return anime.random(-20, 20);
+        },
+        up: () => {
+            return anime.random(-20, 20);
+        },
+        easing: 'cubicBezier(0.465, 1.275, 0.550, -0.240)',
+        duration: 2500,
+        delay: anime.stagger(100),
+    })
 }

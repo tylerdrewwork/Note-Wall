@@ -32,7 +32,7 @@ body {
   position: relative;
 }
 
-#note-modal {
+#modal-wrapper {
   position: absolute;
   left: 0;
   right: 0;
@@ -40,7 +40,7 @@ body {
   margin: auto;
   opacity: 0;
 }
-#note-modal #note-display {
+#modal-wrapper #modal {
   position: relative;
   margin: auto;
   top: -20vh;

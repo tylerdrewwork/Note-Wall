@@ -50,7 +50,7 @@ body {
     }
 }
 
-#note-modal {
+#modal-wrapper {
     // This will make the form absolute, and center position it
     position: absolute;
     left: 0;
@@ -63,7 +63,7 @@ body {
 
     }
     
-    #note-display {    
+    #modal {    
         position: relative;
         margin: auto;
         top: -20vh;

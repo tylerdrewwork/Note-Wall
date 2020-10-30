@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns1="http://sozi.baierouge.fr" id="svg2" viewBox="0 0 460.34 444.82" version="1.0" inkscape:version="0.91 r13725">
+  <defs id="defs4">
+    <linearGradient id="linearGradient3206" y2="378.15" gradientUnits="userSpaceOnUse" x2="181.28" gradientTransform="matrix(.99139 -.13094 .13094 .99139 -65.848 49.985)" y1="343.67" x1="171.37">
+      <stop id="stop3166" style="stop-color:#d2d2d2" offset="0"/>
+      <stop id="stop3168" style="stop-color:#ffffff" offset="1"/>
+    </linearGradient>
+  </defs>
+  <g id="layer1" transform="translate(-117.8 -304.41)">
+    <path id="path3162" style="fill:#000000;fill-opacity:.39216" d="m133.07 372.04c50.97-19.83 134.54-30.12 134.54-30.12l238.09-31.44 25.6 193.78s13.67 113.15 46.85 167.19c-77.62 32.18-215.04 52.19-215.04 52.19l-193.78 25.59-43.78-331.48s-6.98-26.45 7.52-45.71z"/>
+    <path id="rect2385" style="stroke:#000000;stroke-width:4;fill:url(#linearGradient3206)" d="m125.64 364.97c58.48-16.83 137.04-27.11 137.04-27.11l238.1-31.45 25.59 193.78s8.77 76 41.94 130.03c-63.19 76.14-210.13 89.35-210.13 89.35l-193.78 25.6-43.78-331.49s-3.8-31.87 5.02-48.71z"/>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Blank sticky note 1</dc:title>
+        <dc:date>2006-12-26T00:00:00</dc:date>
+        <dc:description/>
+        <dc:source>https://openclipart.org/detail/17621/-by--17621</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>lemmling</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
