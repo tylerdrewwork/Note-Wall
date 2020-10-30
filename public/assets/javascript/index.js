@@ -73,5 +73,10 @@ function showCreateNoteModal() {
     openNoteAnim();
 }
 
+function reloadPage() {
+    location.reload();
+}
+
 $("body").on("click", ".wallnote", showNote);
 $("body").on("click", "#create-note", showCreateNoteModal);
+$("body").on("click", "#more-notes", reloadPage);
