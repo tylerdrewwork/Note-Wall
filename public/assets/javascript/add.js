@@ -15,7 +15,10 @@ console.log("clicked");
     $.post("/api/new", newNote)
     .then(function(data) {
         console.log(data);
+        $("#note-modal").css("display", "none");
+        location.reload();
     });
+
 
 // Empties out each input box by replacing value with empty string
     $("#newNoteText").val("");

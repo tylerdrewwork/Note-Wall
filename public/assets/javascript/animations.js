@@ -21,6 +21,7 @@ function openNoteAnim() {
     console.log("Opening note... ");
     noteOpenAnim.direction = "normal";
     noteOpenAnim.play();
+    $("#note-modal").css("display", "block");
 }
 
 function closeNoteAnim() {
