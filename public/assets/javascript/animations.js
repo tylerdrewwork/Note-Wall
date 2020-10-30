@@ -35,16 +35,13 @@ function closeNoteAnim() {
 }
 
 function initialNoteRenderAnim() {
-    let notes = document.querySelectorAll('.wallnote');
-    console.log("notes: ", notes);
+    $('.wallnote').css("opacity", 0);
+
     anime({
-        targets: notes,
-        opacity: 0,
-        // delay: anime.stagger(200),
-    });
-    anime({
-        targets: "#create-note",
-        opacity: 0,
-        // delay: anime.stagger(200),
+        targets: '.wallnote',
+        opacity: 1,
+        duration: 2500,
+        easing: 'linear',
+        delay: anime.stagger(50),
     });
 }
