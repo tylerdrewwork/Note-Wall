@@ -1,6 +1,6 @@
 // This is the actual animation. You can reference noteOpenAnim to run animation methods
 const noteOpenAnim = anime({
-    targets: '#note-container',
+    targets: '#note-modal',
     translateY: '-50vh',
     opacity: 1,
     autoplay: false,

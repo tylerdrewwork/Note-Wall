@@ -47,7 +47,7 @@ body {
     }
 }
 
-#note-container {
+#note-modal {
     // This will make the form absolute, and center position it
     position: absolute;
     left: 0;
@@ -72,4 +72,15 @@ body {
         opacity: 1;
     
     }
+
+}
+
+#create-note {
+    color: white;
+    
+}
+
+#more-notes {
+    color: white;
+   
 }
