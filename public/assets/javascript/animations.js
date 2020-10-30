@@ -36,14 +36,29 @@ function closeNoteAnim() {
 
 // This is what makes the notes look really good as they load onto the page
 function initialNoteRenderAnim() {
-    $('.wallnote').css("opacity", 0);
-    $('.wallnote').css("opacity", 0);
+    $('.wallnote img').css("opacity", 0);
 
+    // Fade In
     anime({
-        targets: '.wallnote',
+        targets: '.wallnote img',
         opacity: 1,
         duration: 2500,
         easing: 'linear',
+        delay: anime.stagger(50),
+    });
+
+    // Change Size as if falling in
+    anime({
+        targets: '.wallnote img',
+        left: () => {
+            return anime.random(-15, 15);
+        },
+        rotate: function () {
+            return anime.random(-25, 25);
+        },
+        scale: [2, 1],
+        easing: 'linear',
+        duration: 2500,
         delay: anime.stagger(50),
     });
 }

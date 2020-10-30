@@ -39,6 +39,9 @@ body {
         width: min(70px, 10vw);
         cursor: pointer;
 
+        img {
+            position: relative;
+        }
         // The following code was for the hole that the note was going to be in:
         // height: auto;
         // padding-top: min(70px, 10vw); // Padding top needs to be the same as width to keep the circle shape. See here: https://css-tricks.com/forums/topic/css-responsive-circles/

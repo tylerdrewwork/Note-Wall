@@ -28,6 +28,9 @@ body {
   width: min(70px, 10vw);
   cursor: pointer;
 }
+#note-wall-container .wallnote img {
+  position: relative;
+}
 
 #note-modal {
   position: absolute;
@@ -47,4 +50,12 @@ body {
   border: #19183d 2px solid;
   border-radius: 10px;
   opacity: 1;
+}
+
+#create-note {
+  color: white;
+}
+
+#more-notes {
+  color: white;
 }
