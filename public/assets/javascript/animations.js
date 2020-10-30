@@ -1,4 +1,14 @@
-// This is the actual animation. You can reference noteOpenAnim to run animation methods
+// Variables
+
+// This lets us get a reference to the note that's open so we can put it back on the board
+let noteThatIsCurrentlyOpen = null;;
+// This prevents us from running the animation multiple times until it's finished
+let isNoteOpenAnimCompleted = true;
+
+//
+// Animations
+//
+
 const modalOpenAnim = anime({
     targets: '#modal-wrapper',
     translateY: '-50vh',
@@ -12,14 +22,15 @@ const modalOpenAnim = anime({
     complete: function(anim) {
         isNoteOpenAnimCompleted = true;
     },
-})
+});
 
 const removeNoteFromWallAnim = anime({
-    targets: ''
+    targets: noteThatIsCurrentlyOpen,
+    opacity: 0,
+    autoplay: false,
+    easing: 'linear',
+    duration: 400,
 })
-// This prevents us from running the animation multiple times until it's finished
-let isNoteOpenAnimCompleted = true;
-
 
 //
 // Functions
@@ -27,7 +38,27 @@ let isNoteOpenAnimCompleted = true;
 
 function openModalAnim(noteId) {
     if (!isNoteOpenAnimCompleted) return; // If it's not completed, then return and do nothing
-    console.log("Opening note... ");
+    
+    // Add note to board if we're currently holding one
+    if (noteThatIsCurrentlyOpen) {
+        anime({
+            targets: noteThatIsCurrentlyOpen,
+            opacity: 1,
+            easing: 'linear',
+            duration: 400,
+        })
+    }
+    
+    // Remove note from board
+    noteThatIsCurrentlyOpen = document.querySelectorAll(`[data-note-id='${noteId}']`);
+    anime({
+        targets: noteThatIsCurrentlyOpen,
+        opacity: 0,
+        easing: 'linear',
+        duration: 400,
+    })
+
+    // Open Modal
     modalOpenAnim.direction = "normal";
     modalOpenAnim.play();
 }
@@ -41,10 +72,10 @@ function closeModalAnim() {
 // This is what makes the notes look really good as they load onto the page
 function initialNoteRenderAnim() {
     // We put these variables at the top so they are easier to change if we want to modify the animation
-    const animDuration = 2500;
+    const animDuration = 2000;
     const staggerInMs = 100;
     const rotationAmount = 25;
-    const flutterAmount = 20;
+    const flutterAmount = 10;
     const flutterVariation = 2;
 
     $('.wallnote img').css("opacity", 0);
