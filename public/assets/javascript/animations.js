@@ -45,6 +45,7 @@ function initialNoteRenderAnim() {
     const staggerInMs = 100;
     const rotationAmount = 25;
     const flutterAmount = 20;
+    const flutterVariation = 2;
 
     $('.wallnote img').css("opacity", 0);
 
@@ -57,7 +58,7 @@ function initialNoteRenderAnim() {
         delay: anime.stagger(staggerInMs),
     });
 
-    // Change Size as if falling in
+    // Change Size and rotation as if falling in
     anime({
         targets: '.wallnote img',
         rotate: function () {
@@ -73,10 +74,24 @@ function initialNoteRenderAnim() {
     anime({
         targets: '.wallnote img',
         left: () => {
-            return anime.random(-flutterAmount, flutterAmount);
+            let destination = anime.random(-flutterAmount, flutterAmount);
+            let path = [ 
+                destination,
+                destination * -flutterVariation,
+                destination * flutterVariation,
+                destination,
+            ]
+            return path;
         },
-        up: () => {
-            return anime.random(-flutterAmount, flutterAmount);
+        top: () => {
+            let destination = anime.random(-flutterAmount, flutterAmount);
+            let path = [ 
+                destination,
+                destination * -flutterVariation,
+                destination * flutterVariation,
+                destination,
+            ]
+            return path;
         },
         easing: 'cubicBezier(0.465, 1.275, 0.550, -0.240)',
         duration: animDuration,
