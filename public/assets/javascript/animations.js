@@ -42,27 +42,36 @@ function openModalAnim(noteId) {
     // Open Modal
     modalOpenAnim.direction = "normal";
     modalOpenAnim.play();
-}
+};
 
 function takeNoteOffBoardAnim() {
     anime({
         targets: noteThatIsCurrentlyOpen,
+        translateY: -20,
         opacity: 0,
         easing: 'linear',
         duration: 400,
+        complete: (anim) => {
+            $(noteThatIsCurrentlyOpen).css("visibility", "hidden");
+        }
     });
-}
+};
 
 function putNoteOnBoardAnim() {
     if (noteThatIsCurrentlyOpen) {
         anime({
             targets: noteThatIsCurrentlyOpen,
+            translateY: 0,
             opacity: 1,
             easing: 'linear',
             duration: 400,
-        })
+            delay: 300,
+            begin: (anim) => {
+                $(noteThatIsCurrentlyOpen).css("visibility", "visible");
+            }
+        });
     };
-}
+};
 
 function closeModalAnim() {
     if (!isNoteOpenAnimCompleted) return; // If it's not completed, then return and do nothing
