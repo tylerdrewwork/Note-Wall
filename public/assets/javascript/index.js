@@ -53,6 +53,9 @@ function showNewNoteForm() {
 
 function showNote() {
     
+    $("#modal-new").css("display", "none");
+    $("#modal-read").css("display", "block");
+
     let noteId = $(this).data("note-id");
     
     $.get(`api/notes/${noteId}`, function(data) {
@@ -64,8 +67,11 @@ function showNote() {
 }
 
 function showCreateNoteModal() {
-    
+    console.log("clicked");
+    $("#modal-new").css("display", "block");
+    $("#modal-read").css("display", "none");
+    openNoteAnim();
 }
 
 $("body").on("click", ".wallnote", showNote);
-$("body").on("click", "#create-button", showCreateNoteModal)
+$("body").on("click", "#create-note", showCreateNoteModal);
