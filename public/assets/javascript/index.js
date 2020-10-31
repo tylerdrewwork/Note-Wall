@@ -72,7 +72,6 @@ function showNote() {
 }
 
 function showCreateNoteModal() {
-    console.log("clicked");
     $("#modal-new").css("display", "block");
     $("#modal-read").css("display", "none");
     openModalAnim();
