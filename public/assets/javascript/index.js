@@ -69,7 +69,7 @@ function showNote() {
         $("#modal-text").text(data.text);
         openModalAnim(noteId);
     })
-    Note.increment('views', { by: 1, where: { id: `noteId` } });
+
 }
 
 function showCreateNoteModal() {
