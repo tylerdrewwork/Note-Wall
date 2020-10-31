@@ -79,11 +79,13 @@ body {
 }
 
 #create-note {
-    color: white;
-    
+    color: $clr-paper;
 }
 
 #more-notes {
-    color: white;
-   
+    color: $clr-paper;
+}
+
+#total-notes {
+    color: $clr-paper;
 }

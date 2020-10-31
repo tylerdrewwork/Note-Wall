@@ -39,6 +39,9 @@ function openModalAnim(noteId) {
     noteThatIsCurrentlyOpen = document.querySelectorAll(`[data-note-id='${noteId}']`);
     takeNoteOffBoardAnim();
 
+    // Make Modal Display as Block
+    $("#note-modal").css("display", "block");
+
     // Open Modal
     modalOpenAnim.direction = "normal";
     modalOpenAnim.play();

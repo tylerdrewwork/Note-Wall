@@ -7,7 +7,10 @@ module.exports = function(sequelize, DataTypes) {
         len: [3, 255]
       }
     },
-    views: DataTypes.INTEGER,
+    views: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0
+    },
     author_id: DataTypes.INTEGER
   });
   return Note;
