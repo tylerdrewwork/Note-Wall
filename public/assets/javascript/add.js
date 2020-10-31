@@ -15,7 +15,7 @@ console.log("clicked");
     $.post("/api/new", newNote)
     .then(function(data) {
         console.log(data);
-        $("#note-modal").css("display", "none");
+        $("#modal").css("display", "none");
         location.reload();
     });
 

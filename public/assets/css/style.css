@@ -28,8 +28,11 @@ body {
   width: min(70px, 10vw);
   cursor: pointer;
 }
+#note-wall-container .wallnote img {
+  position: relative;
+}
 
-#note-modal {
+#modal-wrapper {
   position: absolute;
   left: 0;
   right: 0;
@@ -37,7 +40,7 @@ body {
   margin: auto;
   opacity: 0;
 }
-#note-modal #note-display {
+#modal-wrapper #modal {
   position: relative;
   margin: auto;
   top: -20vh;
@@ -47,4 +50,12 @@ body {
   border: #19183d 2px solid;
   border-radius: 10px;
   opacity: 1;
+}
+
+#create-note {
+  color: white;
+}
+
+#more-notes {
+  color: white;
 }
