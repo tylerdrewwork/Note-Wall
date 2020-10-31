@@ -50,15 +50,15 @@ module.exports = function(app) {
   });
 }
 
-// // PUT route
-// app.put("/api/notes/views/:id", function (req, res) {
-//   db.Note.update(
-//     {id: req.body.id},
-//     {views: views +1
-//   }).then(function(dbNotes) {
-//     res.json(dbNotes);
-//   })
-// });
+// PUT route
+app.put("/api/notes/views/:id", function (req, res) {
+  db.Note.update(
+    {id: req.body.id},
+    {views: views +1
+  }).then(function(dbNotes) {
+    res.json(dbNotes);
+  })
+});
 
 
 // Keeping the below code, but don't think it's going to work
