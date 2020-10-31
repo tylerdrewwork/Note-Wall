@@ -86,7 +86,8 @@ function initialNoteRenderAnim() {
     const animDuration = 2000;
     const staggerInMs = 100;
     const rotationAmount = 25;
-    const flutterAmount = 10;
+    const flutterAmountInX = 20;
+    const flutterAmountInY = 10;
     const flutterVariation = 2;
 
     $('.wallnote img').css("opacity", 0);
@@ -116,7 +117,7 @@ function initialNoteRenderAnim() {
     anime({
         targets: '.wallnote img',
         left: () => {
-            let destination = anime.random(-flutterAmount, flutterAmount);
+            let destination = anime.random(-flutterAmountInX, flutterAmountInX);
             let path = [ 
                 destination,
                 destination * -flutterVariation,
@@ -126,7 +127,7 @@ function initialNoteRenderAnim() {
             return path;
         },
         top: () => {
-            let destination = anime.random(-flutterAmount, flutterAmount);
+            let destination = anime.random(-flutterAmountInY, flutterAmountInY);
             let path = [ 
                 destination,
                 destination * -flutterVariation,
