@@ -59,3 +59,44 @@ body {
 #more-notes {
   color: white;
 }
+
+/* Desmond Stylin' */
+
+#total-notes {
+  margin-top: 15px;
+  margin-left: 30px;
+  color: white;
+}
+
+.total-wrap {
+  /* background-image: linear-gradient(rgb(29, 63, 216, 0.1), rgb(29, 63, 216, 0.3));
+  width: fit-content; */
+  background: -webkit-linear-gradient(rgba(86, 110, 219, 0.712), rgba(0, 193, 252, 0.3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#create-note {
+  margin-left: 3.5px;
+  border-radius: 25px;
+  background-image: url(../img/crumpled-paper.jpg);
+  color: black;
+  font-family: 'Syne Mono', monospace;
+  
+}
+
+#create-note:hover {
+  transform: scale(1.1, 1.1);
+}
+
+#more-notes {
+  margin-left: 3.5px;
+  border-radius: 25px;
+  background-image: url(../img/crumpled-paper.jpg);
+  color: black;
+  font-family: 'Syne Mono', monospace;
+}
+
+#more-notes:hover {
+  transform: scale(1.1, 1.1);
+}

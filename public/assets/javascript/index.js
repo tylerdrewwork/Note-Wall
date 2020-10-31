@@ -60,15 +60,16 @@ function showNote() {
     
     $("#modal-new").css("display", "none");
     $("#modal-read").css("display", "block");
-
+    
     let noteId = $(this).data("note-id");
     
     $.get(`api/notes/${noteId}`, function(data) {
-
+        
         $("#modal-views").text(data.views);
         $("#modal-text").text(data.text);
         openModalAnim(noteId);
     })
+    Note.increment('views', { by: 1, where: { id: `noteId` } });
 }
 
 function showCreateNoteModal() {
