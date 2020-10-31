@@ -78,6 +78,10 @@ function putNoteOnBoardAnim() {
 
 function closeModalAnim() {
     if (!isNoteOpenAnimCompleted) return; // If it's not completed, then return and do nothing
+
+    // Make Modal Display as Block
+    $("#note-modal").css("display", "block");
+    
     putNoteOnBoardAnim();
     modalOpenAnim.direction = "reverse";
     modalOpenAnim.play();

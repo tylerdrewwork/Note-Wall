@@ -85,5 +85,3 @@ function reloadPage() {
 $("body").on("click", ".wallnote", showNote);
 $("body").on("click", "#create-note", showCreateNoteModal);
 $("body").on("click", "#more-notes", reloadPage);
-
-});
