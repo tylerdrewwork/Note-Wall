@@ -1,7 +1,9 @@
+// FIXME When having a note open, and clicking on another note, it doesn't place the first back down; effectively losing it into space. Not sure what the issue is here, it was working on branch 11 a few commits ago.
+
 // Variables
 
 // This lets us get a reference to the note that's open so we can put it back on the board
-let noteThatIsCurrentlyOpen = null;;
+let noteThatIsCurrentlyOpen = null;
 // This prevents us from running the animation multiple times until it's finished
 let isNoteOpenAnimCompleted = true;
 
@@ -61,6 +63,9 @@ function takeNoteOffBoardAnim() {
 };
 
 function putNoteOnBoardAnim() {
+    console.log("Note that's open: ", noteThatIsCurrentlyOpen);
+
+
     if (noteThatIsCurrentlyOpen) {
         anime({
             targets: noteThatIsCurrentlyOpen,
