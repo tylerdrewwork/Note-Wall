@@ -13,7 +13,9 @@ body {
   margin: 5% auto;
   width: 70vw;
   height: 65vh;
-  background-color: #9ba0b3;
+  /* background-color: #9ba0b3; */
+  background-image: url("../img/bgd3.jpg");
+  background-size: 110%;
   border-radius: 25px;
 }
 @media only screen and (max-width: 425px) {
@@ -60,12 +62,13 @@ body {
   color: white;
 }
 
-/* Desmond Stylin' */
-
 #total-notes {
-  margin-top: 15px;
-  margin-left: 30px;
+  margin-top: 10px;
+  margin-left: 28px;
   color: white;
+  font-family: 'Syne Mono', monospace;
+  font-size: large;
+  font-weight: 900;
 }
 
 .total-wrap {
@@ -77,11 +80,13 @@ body {
 }
 
 #create-note {
+  margin-top: 6px;
   margin-left: 3.5px;
   border-radius: 25px;
   background-image: url(../img/crumpled-paper.jpg);
   background-size: 100%;
   color: black;
+  font-weight: 600;
   font-family: 'Syne Mono', monospace;
   
 }
@@ -91,11 +96,13 @@ body {
 }
 
 #more-notes {
+  margin-top: 6px;
   margin-left: 3.5px;
   border-radius: 25px;
   background-image: url(../img/crumpled-paper.jpg);
   background-size: 100%;
   color: black;
+  font-weight: 600;
   font-family: 'Syne Mono', monospace;
 }
 
