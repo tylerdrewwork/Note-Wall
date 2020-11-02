@@ -76,7 +76,11 @@ body {
         border: $clr-navy 2px solid;
         border-radius: 10px;
         opacity: 1;
-    
+    }
+
+    #modal-new-wrapper {
+        display: grid;
+        
     }
 
 }

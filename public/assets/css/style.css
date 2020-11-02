@@ -53,6 +53,9 @@ body {
   border-radius: 10px;
   opacity: 1;
 }
+#modal-wrapper #modal-new-wrapper {
+  display: grid;
+}
 
 #more-notes {
   color: white;
