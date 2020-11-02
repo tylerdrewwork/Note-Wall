@@ -5,6 +5,10 @@ body {
   overflow: hidden;
 }
 
+header {
+  text-align: center;
+}
+
 #note-wall-container {
   display: grid;
   grid-template-rows: repeat(5, 1fr);
@@ -97,7 +101,6 @@ body {
 
 #total-notes {
   margin-top: 10px;
-  margin-left: 28px;
   color: white;
   font-family: "Syne Mono", monospace;
   font-size: large;
