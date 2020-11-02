@@ -32,6 +32,8 @@ module.exports = function(app) {
     })
       .then(function(dbNotes) {
         res.json(dbNotes);
+        
+        
       });
   });
 
@@ -46,4 +48,26 @@ module.exports = function(app) {
       res.json(dbNotes);
     })
   });
+
+  // PUT route // Clueless as to the syntax... and about 6 askBCS chats didn't help either *facepalm*
+
+// app.put("/api/notes/views/:id", function (req, res) {
+//   db.Note.update(
+//     {id: req.body.id},
+//     {views: views +1
+//   }).then(function(dbNotes) {
+//     res.json(dbNotes);
+//   }).catch(function(dbError){
+//     console.log("XXX------HIT ERROR IN PUT ROUTE: \n", dbError)
+//   })
+// });
+
+// The below code is the original attempt... I stuck this all over the place... even once inside the PUT
+// Note.increment('views', { by: 1, where: { id: 'note' } });
+
 }
+
+
+
+
+

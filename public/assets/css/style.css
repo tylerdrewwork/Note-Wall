@@ -13,7 +13,9 @@ body {
   margin: 5% auto;
   width: 70vw;
   height: 65vh;
-  background-color: #9ba0b3;
+  /* background-color: #9ba0b3; */
+  background-image: url("../img/bgd3.jpg");
+  background-size: 110%;
   border-radius: 25px;
 }
 @media only screen and (max-width: 425px) {
@@ -58,4 +60,52 @@ body {
 
 #more-notes {
   color: white;
+}
+
+#total-notes {
+  margin-top: 10px;
+  margin-left: 28px;
+  color: white;
+  font-family: 'Syne Mono', monospace;
+  font-size: large;
+  font-weight: 900;
+}
+
+.total-wrap {
+  /* background-image: linear-gradient(rgb(29, 63, 216, 0.1), rgb(29, 63, 216, 0.3));
+  width: fit-content; */
+  background: -webkit-linear-gradient(rgba(21, 64, 255, 0.712), rgba(21, 64, 255, 0.712), rgba(0, 193, 252, 0.3), rgba(0, 193, 252, 0.3), rgba(33, 255, 225, 0.712));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#create-note {
+  margin-top: 6px;
+  margin-left: 3.5px;
+  border-radius: 25px;
+  background-image: url(../img/crumpled-paper.jpg);
+  background-size: 100%;
+  color: black;
+  font-weight: 600;
+  font-family: 'Syne Mono', monospace;
+  
+}
+
+#create-note:hover {
+  transform: scale(1.1, 1.1);
+}
+
+#more-notes {
+  margin-top: 6px;
+  margin-left: 3.5px;
+  border-radius: 25px;
+  background-image: url(../img/crumpled-paper.jpg);
+  background-size: 100%;
+  color: black;
+  font-weight: 600;
+  font-family: 'Syne Mono', monospace;
+}
+
+#more-notes:hover {
+  transform: scale(1.1, 1.1);
 }
