@@ -25,16 +25,22 @@ module.exports = function(app) {
 
    // Get route for retrieving a single note
    app.get("/api/notes/:id", function(req, res) {
-    db.Note.findOne({
-      where: {
-        id: req.params.id
-      }
-    })
+     
+    // After the API route is hit, increment the views by 1!
+    db.Note.increment('views', { by: 1, where: { id: req.params.id } })
+    // Then, find the note with the id that we are looking for in the URL. Everything past this point is like we would do normally.
+    // The only real difference here is that the normal function is wrapped in the 'increment's .then function.
+    .then(function(dbNotes) {
+      db.Note.findOne({
+        where: {
+          id: req.params.id
+        }
+      })
+      // Then, after we find the note in the db, resolve it like we would normally.
       .then(function(dbNotes) {
-        res.json(dbNotes);
-        
-        
-      });
+        res.json(dbNotes);   
+      })     
+    })
   });
 
 // POST route to create a new note
