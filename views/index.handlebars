@@ -10,18 +10,22 @@
 
 <section id="modal-wrapper">
     <div id="modal">
-        <button id="note-btn-exit" onclick="closeModalAnim()">X</button>
-
+        
+        {{!-- These are in wrappers so that their display can be changed into grid without our js hiding/messing them --}}
         <div id="modal-read-wrapper">
-            <p id="modal-views"></p>
-            <p id="modal-text"></p>
+            <div id="modal-read">
+                <button class="note-btn-exit" onclick="closeModalAnim()">X</button>
+                <p id="modal-views"></p>
+                <p id="modal-text"></p>
+            </div>
         </div>
             
         <div id="modal-new-wrapper">
-            <form>
+            <div id="modal-new">
                 <input type="text" id="newNoteText" placeholder="Enter Text"></input>
+                <button class="note-btn-exit" onclick="closeModalAnim()">Cancel</button>
                 <button type="submit" id="add-btn">Submit</button>
-            </form>
+            </div>
         </div>
     </div>
 </section>
