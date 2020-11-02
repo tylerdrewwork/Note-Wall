@@ -75,7 +75,7 @@ function showNote() {
     
     $.get(`api/notes/${noteId}`, function(data) {
         
-        $("#modal-views").text(data.views);
+        $("#modal-views-int").text(data.views);
         $("#modal-text").text(data.text);
         openModalAnim(noteId);
     })
