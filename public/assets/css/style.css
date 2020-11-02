@@ -13,9 +13,9 @@ body {
   margin: 5% auto;
   width: 70vw;
   height: 65vh;
-  /* background-color: #9ba0b3; */
   background-image: url("../img/bgd3.jpg");
   background-size: 110%;
+  background-color: #9ba0b3;
   border-radius: 25px;
 }
 @media only screen and (max-width: 425px) {
@@ -54,10 +54,6 @@ body {
   opacity: 1;
 }
 
-#create-note {
-  color: white;
-}
-
 #more-notes {
   color: white;
 }
@@ -66,7 +62,7 @@ body {
   margin-top: 10px;
   margin-left: 28px;
   color: white;
-  font-family: 'Syne Mono', monospace;
+  font-family: "Syne Mono", monospace;
   font-size: large;
   font-weight: 900;
 }
@@ -87,8 +83,7 @@ body {
   background-size: 100%;
   color: black;
   font-weight: 600;
-  font-family: 'Syne Mono', monospace;
-  
+  font-family: "Syne Mono", monospace;
 }
 
 #create-note:hover {
@@ -103,7 +98,7 @@ body {
   background-size: 100%;
   color: black;
   font-weight: 600;
-  font-family: 'Syne Mono', monospace;
+  font-family: "Syne Mono", monospace;
 }
 
 #more-notes:hover {
