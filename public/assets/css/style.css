@@ -57,6 +57,21 @@ body {
   height: 100%;
   width: 100%;
 }
+#modal-wrapper #modal-read {
+  height: 100%;
+  display: grid;
+  grid-template-rows: [start] 1fr [body-start] 4fr [body-end] 1fr [end];
+  grid-template-columns: [start] 1fr 1fr [bottom] 1fr [end];
+}
+#modal-wrapper #modal-read #modal-views {
+  grid-row: bottom;
+}
+#modal-wrapper #modal-read #modal-text {
+  grid-row: body-start/body-end;
+  grid-column: start/end;
+  text-align: center;
+  align-self: center;
+}
 #modal-wrapper #modal-new {
   height: 100%;
   display: grid;

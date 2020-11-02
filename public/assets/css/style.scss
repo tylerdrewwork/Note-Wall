@@ -83,6 +83,28 @@ body {
         width: 100%;
     }
 
+    #modal-read {
+        height: 100%;
+        display: grid;
+        grid-template-rows: [start] 1fr [body-start] 4fr [body-end] 1fr [end];
+        grid-template-columns: [start] 1fr 1fr [bottom] 1fr [end];
+
+        #modal-views {
+            grid-row: bottom;
+        }
+
+        #modal-text {
+            grid-row: body-start / body-end;
+            grid-column: start / end;
+            text-align: center;
+            align-self: center;
+        }
+
+        .note-btn-exit {
+
+        }
+    }
+
     #modal-new {
         height: 100%;
         display: grid;
