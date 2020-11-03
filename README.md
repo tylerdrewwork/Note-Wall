@@ -1,5 +1,5 @@
 # NOTE WALL
-![License](https://img.shields.io/badge/LICENSE-none-blue)
+![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)
 
 ## DESCRIPTION
 A digital board to post anonymous notes, appropriate for all sentiments and occasions. Our app provides an online sanctum for safe expression in written form.
@@ -26,10 +26,7 @@ Then navigate to the browser, and in the address (URL) bar and type: <i>localhos
 Click on <i>CREATE NOTE</i> to and fill out an anonymous note to post to the note board. Or click on some of the existing notes already on the board to read what others had to say.
 
 ## LICENSE
-none
 
-## TEST
-N/A
 
 ## CONTRIBUTORS
 👾Tyler Smith🎮
