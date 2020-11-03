@@ -14,8 +14,8 @@ header {
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-  margin-top: 3%;
-  margin-left: 14%;
+  margin: auto;
+  margin-top: 1%;
   margin-bottom: 2%;
   width: 70vw;
   height: 65vh;
