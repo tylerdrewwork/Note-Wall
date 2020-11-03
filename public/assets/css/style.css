@@ -61,6 +61,11 @@ header {
   border-radius: 10px;
   opacity: 1;
 }
+@media only screen and (max-width: 425px) {
+  #modal-wrapper #modal {
+    background-size: 300%;
+  }
+}
 #modal-wrapper #modal-new-wrapper, #modal-wrapper #modal-read-wrapper {
   height: 100%;
   width: 100%;
@@ -124,6 +129,14 @@ header {
   background-image: url("../img/push-pin.jpg");
   background-size: 58px;
   border-radius: 50px;
+}
+@media only screen and (max-width: 425px) {
+  .note-btn-exit {
+    height: 60%;
+    grid-column: start 8/11;
+    background-size: 15px;
+    border-radius: 15px;
+  }
 }
 
 #more-notes {

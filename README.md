@@ -1,8 +1,5 @@
 # NOTE WALL
-![License](https://img.shields.io/badge/LICENSE-none-blue)
-
-![gif1](./)
-![gif2](./)
+![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)
 
 ## DESCRIPTION
 A digital board to post anonymous notes, appropriate for all sentiments and occasions. Our app provides an online sanctum for safe expression in written form.
@@ -18,26 +15,18 @@ A digital board to post anonymous notes, appropriate for all sentiments and occa
 
 ## INSTALLATION
 
-In the terminal navigate to the app's root directory, and type: <br>
-<marquee>'npm install'</marquee>
-Press enter, then type: <br> 
-<marquee>'npm i express express-handlebars fs mysql2 sequelize'</marquee> <br> 
-Press enter, then type: <br>
-<marquee>node server.js</marquee>
-When the server console reads: <br>
-<marquee>App listening on PORT 8080</marquee>
-Then navigate to the browser, and in the address (URL) bar and type: <br>
-<marquee>localhost:8080</marquee>
-Press Enter... enjoy. 🙏
+1.) In the terminal navigate to the app's root directory, and type: <i>npm install</i><br><br>
+2.) Press enter, then type: <i>npm i express express-handlebars fs mysql2 sequelize</i> <br><br> 
+3.) Press enter, then type: <i>node server.js</i><br><br>
+4.) When the server console reads: <i>App listening on PORT 8080</i><br><br>
+Then navigate to the browser, and in the address (URL) bar and type: <i>localhost:8080</i><br><br>
+5.) Press Enter... enjoy. 🙏
 
 ## USAGE
-In the terminal type: 'node server.js' and press enter.
+Click on <i>CREATE NOTE</i> to and fill out an anonymous note to post to the note board. Or click on some of the existing notes already on the board to read what others had to say.
 
 ## LICENSE
-none
 
-## TEST
-N/A
 
 ## CONTRIBUTORS
 👾Tyler Smith🎮
@@ -57,7 +46,9 @@ https://github.com/josh-wilson6289 <br>
 https://github.com/JesseJ713 <br> 
 https://github.com/DesmondAldridge<br>
 <br>
+
 Email:<br>
 joshua.wilson6289@gmail.com
 jesse.jackson.c@gmail.com
+tylerdrew.work@gmail.com
 desmondaldridge@gmail.com
