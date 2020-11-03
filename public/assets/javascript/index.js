@@ -53,13 +53,13 @@ $(document).ready(function() {
 // END OF "RUN ON PAGE LOAD FINISH"
 
 function showNewNoteForm() {
-    // $("#modal-read");
+    // $("#modal-read-wrapper");
 }
 
 function showNote() {
     
-    $("#modal-new").css("display", "none");
-    $("#modal-read").css("display", "block");
+    $("#modal-new-wrapper").css("display", "none");
+    $("#modal-read-wrapper").css("display", "block");
     
     let noteId = $(this).data("note-id");
 
@@ -75,7 +75,7 @@ function showNote() {
     
     $.get(`api/notes/${noteId}`, function(data) {
         
-        $("#modal-views").text(data.views);
+        $("#modal-views-int").text(data.views);
         $("#modal-text").text(data.text);
         openModalAnim(noteId);
     })
@@ -83,8 +83,8 @@ function showNote() {
 }
 
 function showCreateNoteModal() {
-    $("#modal-new").css("display", "block");
-    $("#modal-read").css("display", "none");
+    $("#modal-new-wrapper").css("display", "block");
+    $("#modal-read-wrapper").css("display", "none");
     openModalAnim();
 }
 

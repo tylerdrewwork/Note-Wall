@@ -1,26 +1,29 @@
-<section>
+<header>
     <button id="create-note">Create note</button>
     <button id="more-notes">Get more notes</button>
     <p id="total-notes" class="total-wrap">Total notes: </p>
+</header>
 
-</section>
-<main id="note-wall-container">
-
-</main>
+<main id="note-wall-container"></main>
 
 <section id="modal-wrapper">
     <div id="modal">
-        <button id="note-btn-exit" onclick="closeModalAnim()">X</button>
-
-        <div id="modal-read">
-            {{> modal }}
+        
+        {{!-- These are in wrappers so that their display can be changed into grid without our js hiding/messing them --}}
+        <div id="modal-read-wrapper">
+            <div id="modal-read">
+                <button class="note-btn-exit" onclick="closeModalAnim()">X</button>
+                <p id="modal-views">This note has been read <span id="modal-views-int"></span> times.</p>
+                <p id="modal-text"></p>
+            </div>
         </div>
             
-        <div id="modal-new">
-            <form>
+        <div id="modal-new-wrapper">
+            <div id="modal-new">
                 <input type="text" id="newNoteText" placeholder="Enter Text"></input>
+                <button class="note-btn-exit" onclick="closeModalAnim()">Cancel</button>
                 <button type="submit" id="add-btn">Submit</button>
-            </form>
+            </div>
         </div>
     </div>
 </section>
