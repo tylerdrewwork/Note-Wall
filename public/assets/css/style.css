@@ -110,7 +110,7 @@ header {
   margin-top: 10px;
   color: white;
   font-family: "Syne Mono", monospace;
-  font-size: large;
+  font-size: xx-large;
   font-weight: 900;
 }
 
@@ -123,12 +123,13 @@ header {
 }
 
 #create-note {
-  margin-top: 25px;
+  margin-top: 28px;
   margin-left: 3.5px;
   border-radius: 25px;
   background-image: url(../img/crumpled-paper.jpg);
   background-size: 100%;
   color: black;
+  font-size: large;
   font-weight: 600;
   font-family: "Syne Mono", monospace;
 }
@@ -144,6 +145,7 @@ header {
   background-image: url(../img/crumpled-paper.jpg);
   background-size: 100%;
   color: black;
+  font-size: large;
   font-weight: 600;
   font-family: "Syne Mono", monospace;
 }
@@ -153,7 +155,7 @@ header {
 }
 
 #app-title {
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   font-family: "Architects Daughter", cursive;
   font-size: 60px;
   font-weight: 600;
@@ -163,7 +165,12 @@ header {
 #instructions {
   margin-left: 5%;
   font-family: "Syne Mono", monospace;
-  font-size: large;
+  font-size: xx-large;
   font-weight: 600;
-  color: #29c2f1;
+}
+
+.text-wrap {
+  background: -webkit-linear-gradient(#385bf8, #44d1fc, #00d9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
