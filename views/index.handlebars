@@ -12,7 +12,7 @@
         {{!-- These are in wrappers so that their display can be changed into grid without our js hiding/messing them --}}
         <div id="modal-read-wrapper">
             <div id="modal-read">
-                <button class="note-btn-exit" onclick="closeModalAnim()">X</button>
+                <button class="note-btn-exit" onclick="closeModalAnim()"></button>
                 <p id="modal-views">This note has been read <span id="modal-views-int"></span> times.</p>
                 <p id="modal-text"></p>
             </div>
@@ -21,9 +21,23 @@
         <div id="modal-new-wrapper">
             <div id="modal-new">
                 <input type="text" id="newNoteText" placeholder="Enter Text"></input>
-                <button class="note-btn-exit" onclick="closeModalAnim()">Cancel</button>
+                <button id="cancel-btn" onclick="closeModalAnim()">Cancel</button>
                 <button type="submit" id="add-btn">Submit</button>
             </div>
         </div>
     </div>
+</section>
+<section>
+    <p id="app-title" class="total-wrap">OFF YOUR CHEST</p>
+    <p id="instructions" class="text-wrap">
+        Have something you need to get off your chest? 
+        <br>
+        Create an anonymous note, or click an existing note to see<br>
+        what others have to say!
+    </p>
+    <center>
+    <p id="mobile-instructions" class="text-wrap">Create an anonymous note,<br>
+    or click an existing note to see what others have to say!
+    </p>
+    </center>
 </section>

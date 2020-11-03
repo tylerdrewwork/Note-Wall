@@ -47,7 +47,7 @@ N/A
 <br>
 
 ## CONTACT
-For further questions please contact the Notorious CON-F-I-G team at:
+For further questions please contact the Notorious G-I-T team at:
 
 <br>
 GitHub:<br>
@@ -58,4 +58,6 @@ https://github.com/JesseJ713 <br>
 https://github.com/DesmondAldridge<br>
 <br>
 Email:<br>
+joshua.wilson6289@gmail.com
+jesse.jackson.c@gmail.com
 desmondaldridge@gmail.com
