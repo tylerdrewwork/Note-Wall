@@ -23,12 +23,11 @@ $(document).ready(function() {
         function displayNotes() {
             // ajax to load an array of random notes
             $.get("api/notes", function(data) {
-                //randomNotes is an array
+                // randomNotes is an array
                 let randomNotes = data;
         
                 // Render notes onto the note wall
                 for (let i = 0; i < numberOfNotesToDisplay; i++) {
-                    // $("#note-wall-container").append(`<div class="wallnote"></div>`);
                     if(randomNotes[i] == undefined) {break}; // Break if there aren't enough notes to display on page
                     $("#note-wall-container").append(`<div class="wallnote" data-note-id=${randomNotes[i].id}><img src="assets/svg/sticky_note_white.svg" alt="note"></img></div>`);           
                 }
