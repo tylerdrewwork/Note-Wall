@@ -14,11 +14,13 @@ header {
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-  margin: 5% auto;
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 0.5%;
   width: 70vw;
   height: 65vh;
-  background-image: url("../img/bgd3.jpg");
-  background-size: 110%;
+  background-image: url("../img/cork-xsm.jpg");
+  background-size: 50%;
   background-color: #9ba0b3;
   border-radius: 25px;
 }
@@ -52,7 +54,9 @@ header {
   top: -20vh;
   height: 40vh;
   width: 40vw;
+  background-image: url("../img/crumpled-paper.jpg");
   background-color: #edeee4;
+  background-size: 100%;
   border: #19183d 2px solid;
   border-radius: 10px;
   opacity: 1;
@@ -65,16 +69,24 @@ header {
   height: 100%;
   display: grid;
   grid-template-rows: [start] 1fr [body-start] 4fr [body-end] 1fr [end];
-  grid-template-columns: [start] 1fr 1fr [bottom] 1fr [end];
+  grid-template-columns: [start] 1fr 1fr 1fr 1fr 1fr 1fr [bottom] 1fr 1fr 1fr 1fr 1fr [end];
 }
 #modal-wrapper #modal-read #modal-views {
-  grid-row: bottom;
+  margin-top: 10%;
+  margin-left: 2%;
+  grid-column: start 1/6;
+  font-family: "Architects Daughter", cursive;
+  font-size: medium;
+  font-weight: 400;
 }
 #modal-wrapper #modal-read #modal-text {
   grid-row: body-start/body-end;
   grid-column: start/end;
   text-align: center;
   align-self: center;
+  font-family: "Architects Daughter", cursive;
+  font-size: large;
+  font-weight: 500;
 }
 #modal-wrapper #modal-new {
   height: 100%;
@@ -83,16 +95,35 @@ header {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 #modal-wrapper #modal-new #newNoteText {
+  background: none;
   grid-column: 1/end;
   grid-row: 1/3;
-}
-#modal-wrapper #modal-new .note-btn-exit {
-  grid-row: 3;
-  grid-column: 1/3;
+  font-family: "Architects Daughter", cursive;
+  font-size: large;
+  font-weight: 300;
 }
 #modal-wrapper #modal-new #add-btn {
   grid-row: 3;
-  grid-column: 3/5;
+  grid-column: 2/3;
+  border-radius: 25px;
+  font-family: "Architects Daughter", cursive;
+  font-size: large;
+  font-weight: 600;
+}
+#modal-wrapper #modal-new #cancel-btn {
+  grid-row: 3;
+  grid-column: 3/4;
+  border-radius: 25px;
+  font-family: "Architects Daughter", cursive;
+  font-size: large;
+  font-weight: 600;
+}
+
+.note-btn-exit {
+  grid-column: start 10/11;
+  background-image: url("../img/push-pin.jpg");
+  background-size: 58px;
+  border-radius: 50px;
 }
 
 #more-notes {
@@ -103,25 +134,26 @@ header {
   margin-top: 10px;
   color: white;
   font-family: "Syne Mono", monospace;
-  font-size: large;
+  font-size: xx-large;
   font-weight: 900;
 }
 
 .total-wrap {
   /* background-image: linear-gradient(rgb(29, 63, 216, 0.1), rgb(29, 63, 216, 0.3));
   width: fit-content; */
-  background: -webkit-linear-gradient(rgba(21, 64, 255, 0.712), rgba(21, 64, 255, 0.712), rgba(0, 193, 252, 0.3), rgba(0, 193, 252, 0.3), rgba(33, 255, 225, 0.712));
+  background: -webkit-linear-gradient(rgba(21, 64, 255, 0.712), rgba(21, 64, 255, 0.712), rgba(0, 193, 252, 0.3), #00f4fc, rgba(33, 255, 225, 0.712));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 #create-note {
-  margin-top: 6px;
+  margin-top: 28px;
   margin-left: 3.5px;
   border-radius: 25px;
   background-image: url(../img/crumpled-paper.jpg);
   background-size: 100%;
   color: black;
+  font-size: large;
   font-weight: 600;
   font-family: "Syne Mono", monospace;
 }
@@ -137,10 +169,59 @@ header {
   background-image: url(../img/crumpled-paper.jpg);
   background-size: 100%;
   color: black;
+  font-size: large;
   font-weight: 600;
   font-family: "Syne Mono", monospace;
 }
 
 #more-notes:hover {
   transform: scale(1.1, 1.1);
+}
+
+#app-title {
+  text-align: center;
+  margin-top: 0.5%;
+  font-family: "Architects Daughter", cursive;
+  font-size: 5vw;
+  font-weight: 900;
+  color: #29a8f1;
+}
+@media only screen and (max-width: 425px) {
+  #app-title {
+    margin-top: 3%;
+    font-size: 8vw;
+  }
+}
+
+#instructions {
+  text-align: center;
+  margin-top: 0.3%;
+  font-family: "Syne Mono", monospace;
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+@media only screen and (max-width: 425px) {
+  #instructions {
+    visibility: hidden;
+  }
+}
+
+#mobile-instructions {
+  visibility: hidden;
+}
+@media only screen and (max-width: 425px) {
+  #mobile-instructions {
+    visibility: visible;
+    margin-bottom: 2%;
+    font-family: "Architects Daughter", cursive;
+    font-size: 5vw;
+    font-weight: 600;
+    color: #29a8f1;
+  }
+}
+
+.text-wrap {
+  background: -webkit-linear-gradient(#385bf8, #44d1fc, #00d9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

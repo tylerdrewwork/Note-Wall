@@ -30,12 +30,14 @@ header {
         grid-template-rows: repeat(4, 1fr);
     }
 
-    margin: 5% auto;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: .5%;
     width: 70vw;
     height: 65vh;
 
-    background-image: url("../img/bgd3.jpg");
-    background-size: 110%;
+    background-image: url("../img/cork-xsm.jpg");
+    background-size: 50%;
     
     background-color: $clr-beige;
     border-radius: 25px;
@@ -66,9 +68,9 @@ header {
     margin: auto;
     opacity: 0;
 
-    #note-btn-exit {
+    // #note-btn-exit {
 
-    }
+    // }
     
     #modal {    
         position: relative;
@@ -76,7 +78,9 @@ header {
         top: -20vh;
         height: 40vh;
         width: 40vw;
+        background-image: url("../img/crumpled-paper.jpg");
         background-color: $clr-paper;
+        background-size: 100%;
         border: $clr-navy 2px solid;
         border-radius: 10px;
         opacity: 1;
@@ -91,10 +95,16 @@ header {
         height: 100%;
         display: grid;
         grid-template-rows: [start] 1fr [body-start] 4fr [body-end] 1fr [end];
-        grid-template-columns: [start] 1fr 1fr [bottom] 1fr [end];
+        grid-template-columns: [start] 1fr 1fr 1fr 1fr 1fr 1fr [bottom] 1fr 1fr 1fr 1fr 1fr[end];
 
         #modal-views {
-            grid-row: bottom;
+            margin-top: 10%;
+            margin-left: 2%;
+            grid-column: start 1 / 6;
+            // grid-row: bottom;
+            font-family: 'Architects Daughter', cursive;
+            font-size: medium;
+            font-weight: 400;
         }
 
         #modal-text {
@@ -102,11 +112,12 @@ header {
             grid-column: start / end;
             text-align: center;
             align-self: center;
+            font-family: 'Architects Daughter', cursive;
+            font-size: large;
+            font-weight: 500;
         }
 
-        .note-btn-exit {
 
-        }
     }
 
     #modal-new {
@@ -116,21 +127,49 @@ header {
         grid-template-columns: 1fr 1fr 1fr 1fr;
 
         #newNoteText {
+            background: none;
             grid-column: 1 / end;
             grid-row: 1 / 3;
+            // margin-left: 4%;
+            font-family: 'Architects Daughter', cursive;
+            font-size: large;
+            font-weight: 300;
         }
 
-        .note-btn-exit {
-            grid-row: 3;
-            grid-column: 1 / 3;
-        }
+        // .note-btn-exit {
+        //     grid-row: 3;
+        //     grid-column: 1 / 3;
+        // }
 
         #add-btn {
-            grid-row: 3;
-            grid-column: 3 / 5;
+          grid-row: 3;
+          grid-column: 2 / 3;
+          border-radius: 25px;
+          // background-image: url("../img/write.png");
+          // background-size: 165px 45px;
+          font-family: 'Architects Daughter', cursive;
+          font-size: large;
+          font-weight: 600;
+        }
+        #cancel-btn {
+          grid-row: 3;
+          grid-column: 3 / 4;
+          border-radius: 25px;
+          // background-image: url("../img/eraser.jpg");
+          // background-size: 165px 45px;
+          font-family: 'Architects Daughter', cursive;
+          font-size: large;
+          font-weight: 600;
         }
     }
 
+}
+
+.note-btn-exit {
+  grid-column: start 10 / 11;
+  background-image: url("../img/push-pin.jpg");
+  background-size: 58px;
+  border-radius: 50px;
 }
 
 #more-notes {
@@ -141,25 +180,26 @@ header {
     margin-top: 10px;
     color: white;
     font-family: 'Syne Mono', monospace;
-    font-size: large;
+    font-size: xx-large;
     font-weight: 900;
   }
   
   .total-wrap {
     /* background-image: linear-gradient(rgb(29, 63, 216, 0.1), rgb(29, 63, 216, 0.3));
     width: fit-content; */
-    background: -webkit-linear-gradient(rgba(21, 64, 255, 0.712), rgba(21, 64, 255, 0.712), rgba(0, 193, 252, 0.3), rgba(0, 193, 252, 0.3), rgba(33, 255, 225, 0.712));
+    background: -webkit-linear-gradient(rgba(21, 64, 255, 0.712), rgba(21, 64, 255, 0.712), rgba(0, 193, 252, 0.3), rgb(0, 244, 252), rgba(33, 255, 225, 0.712));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   
   #create-note {
-    margin-top: 6px;
+    margin-top: 28px;
     margin-left: 3.5px;
     border-radius: 25px;
     background-image: url(../img/crumpled-paper.jpg);
     background-size: 100%;
     color: black;
+    font-size: large;
     font-weight: 600;
     font-family: 'Syne Mono', monospace;
   
@@ -176,6 +216,7 @@ header {
     background-image: url(../img/crumpled-paper.jpg);
     background-size: 100%;
     color: black;
+    font-size: large;
     font-weight: 600;
     font-family: 'Syne Mono', monospace;
   }
@@ -183,3 +224,55 @@ header {
   #more-notes:hover {
     transform: scale(1.1, 1.1);
   } 
+
+  #app-title {
+      text-align: center;
+      margin-top: .5%;
+      // margin-bottom: .3%;
+      font-family: 'Architects Daughter', cursive;
+      font-size: 5vw;
+      font-weight: 900;
+      color: #29a8f1;
+      @media only screen and (max-width: 425px) { 
+        margin-top: 3%;
+        font-size: 8vw;
+        // margin-bottom: 0%;
+      }
+  }
+
+  #instructions {
+    text-align: center;
+    margin-top: .3%;
+    font-family: 'Syne Mono', monospace;
+    font-size: 1.5vw;
+    font-weight: 600;
+    // color: #29c2f1;
+    @media only screen and (max-width: 425px) {
+      visibility: hidden; 
+    }
+  }
+
+  #mobile-instructions {
+    visibility: hidden;
+    @media only screen and (max-width: 425px) {
+      visibility: visible;
+      // text-align: center;
+      margin-bottom: 2%;
+      font-family: 'Architects Daughter', cursive;
+      font-size: 5vw;
+      font-weight: 600;
+      color: #29a8f1;
+
+      // float: left;
+      // padding-top: 0%;
+    }
+  }
+
+  .text-wrap {
+    background: -webkit-linear-gradient(rgb(56, 91, 248), rgb(68, 209, 252), rgb(0, 217, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // background: -webkit-linear-gradient(rgba(21, 64, 255, 0.712), rgba(21, 64, 255, 0.712), rgba(0, 193, 252, 0.3), rgba(0, 193, 252, 0.3), rgba(33, 255, 225, 0.712));
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+  }
