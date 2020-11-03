@@ -30,12 +30,14 @@ header {
         grid-template-rows: repeat(4, 1fr);
     }
 
-    margin: 5% auto;
+    margin-top: 3%;
+    margin-left: 14%;
+    margin-bottom: 2%;
     width: 70vw;
     height: 65vh;
 
-    background-image: url("../img/bgd3.jpg");
-    background-size: 110%;
+    background-image: url("../img/cork-xsm.jpg");
+    background-size: 50%;
     
     background-color: $clr-beige;
     border-radius: 25px;
@@ -76,6 +78,7 @@ header {
         top: -20vh;
         height: 40vh;
         width: 40vw;
+        background-image: url("../img/crumpled-paper.jpg");
         background-color: $clr-paper;
         border: $clr-navy 2px solid;
         border-radius: 10px;
@@ -91,13 +94,17 @@ header {
         height: 100%;
         display: grid;
         grid-template-rows: [start] 1fr [body-start] 4fr [body-end] 1fr [end];
-        grid-template-columns: [start] 1fr 1fr [bottom] 1fr [end];
+        grid-template-columns: [start] 1fr 1fr 1fr [bottom] 1fr 1fr 1fr[end];
 
         #modal-views {
-            grid-row: bottom;
+            // margin-top: 3%;
+            // margin-left: 1%;
+            grid-column: start 1 / 4;
+            // grid-row: bottom;
         }
 
         #modal-text {
+            
             grid-row: body-start / body-end;
             grid-column: start / end;
             text-align: center;
@@ -105,7 +112,9 @@ header {
         }
 
         .note-btn-exit {
-
+            grid-column: start 1 / 2;
+            // background: url("../img/blue-push-pin.png");
+            border-radius: 25px;
         }
     }
 
@@ -154,7 +163,7 @@ header {
   }
   
   #create-note {
-    margin-top: 6px;
+    margin-top: 25px;
     margin-left: 3.5px;
     border-radius: 25px;
     background-image: url(../img/crumpled-paper.jpg);
@@ -183,3 +192,19 @@ header {
   #more-notes:hover {
     transform: scale(1.1, 1.1);
   } 
+
+  #app-title {
+      margin-bottom: 2%;
+      font-family: 'Architects Daughter', cursive;
+      font-size: 60px;
+      font-weight: 600;
+      color: #29a8f1;
+  }
+
+  #instructions {
+    margin-left: 5%;
+    font-family: 'Syne Mono', monospace;
+    font-size: large;
+    font-weight: 600;
+    color: #29c2f1;
+  }
