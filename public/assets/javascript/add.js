@@ -11,6 +11,7 @@ $("#add-btn").on("click", function(event) {
 // Sending AJAX Post request of newNote object
     $.post("/api/new", newNote)
     .then(function(data) {
+        // Below fixes a bug where the page will refocus its center onto the modal mid-animation after a reload
         $("#modal").css("display", "none");
         location.reload();
     });
