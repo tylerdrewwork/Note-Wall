@@ -32,7 +32,7 @@ header {
 
     margin: auto;
     margin-top: 1%;
-    margin-bottom: 2%;
+    margin-bottom: .5%;
     width: 70vw;
     height: 65vh;
 
@@ -80,6 +80,7 @@ header {
         width: 40vw;
         background-image: url("../img/crumpled-paper.jpg");
         background-color: $clr-paper;
+        background-size: 100%;
         border: $clr-navy 2px solid;
         border-radius: 10px;
         opacity: 1;
@@ -158,7 +159,7 @@ header {
   .total-wrap {
     /* background-image: linear-gradient(rgb(29, 63, 216, 0.1), rgb(29, 63, 216, 0.3));
     width: fit-content; */
-    background: -webkit-linear-gradient(rgba(21, 64, 255, 0.712), rgba(21, 64, 255, 0.712), rgba(0, 193, 252, 0.3), rgba(0, 193, 252, 0.3), rgba(33, 255, 225, 0.712));
+    background: -webkit-linear-gradient(rgba(21, 64, 255, 0.712), rgba(21, 64, 255, 0.712), rgba(0, 193, 252, 0.3), rgb(0, 244, 252), rgba(33, 255, 225, 0.712));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -198,19 +199,45 @@ header {
 
   #app-title {
       text-align: center;
-    //   margin-bottom: 1%;
+      margin-top: 2%;
+      margin-bottom: .3%;
       font-family: 'Architects Daughter', cursive;
-      font-size: 10vw;
-      font-weight: 600;
+      font-size: 5vw;
+      font-weight: 900;
       color: #29a8f1;
+      @media only screen and (max-width: 425px) { 
+        margin-top: 3%;
+        font-size: 10vw;
+        // margin-bottom: 0%;
+      }
   }
 
   #instructions {
     text-align: center;
+    margin-top: 1%;
     font-family: 'Syne Mono', monospace;
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 600;
     // color: #29c2f1;
+    @media only screen and (max-width: 425px) {
+      visibility: hidden; 
+    }
+  }
+
+  #mobile-instructions {
+    visibility: hidden;
+    @media only screen and (max-width: 425px) {
+      visibility: visible;
+      // text-align: center;
+      margin-bottom: 2%;
+      font-family: 'Architects Daughter', cursive;
+      font-size: 5vw;
+      font-weight: 600;
+      color: #29a8f1;
+
+      // float: left;
+      // padding-top: 0%;
+    }
   }
 
   .text-wrap {
