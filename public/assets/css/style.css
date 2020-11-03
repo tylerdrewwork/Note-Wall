@@ -158,8 +158,7 @@ header {
 
 #app-title {
   text-align: center;
-  margin-top: 2%;
-  margin-bottom: 0.3%;
+  margin-top: 0.5%;
   font-family: "Architects Daughter", cursive;
   font-size: 5vw;
   font-weight: 900;
@@ -168,13 +167,13 @@ header {
 @media only screen and (max-width: 425px) {
   #app-title {
     margin-top: 3%;
-    font-size: 10vw;
+    font-size: 8vw;
   }
 }
 
 #instructions {
   text-align: center;
-  margin-top: 1%;
+  margin-top: 0.3%;
   font-family: "Syne Mono", monospace;
   font-size: 1.5vw;
   font-weight: 600;
