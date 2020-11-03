@@ -90,6 +90,7 @@ header {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 #modal-wrapper #modal-new #newNoteText {
+  background: none;
   grid-column: 1/end;
   grid-row: 1/3;
 }
