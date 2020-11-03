@@ -84,6 +84,10 @@ header {
         border: $clr-navy 2px solid;
         border-radius: 10px;
         opacity: 1;
+
+        @media only screen and (max-width: 425px) { 
+          background-size: 300%;
+        }
     }
 
     #modal-new-wrapper, #modal-read-wrapper {
@@ -105,6 +109,7 @@ header {
             font-family: 'Architects Daughter', cursive;
             font-size: medium;
             font-weight: 400;
+      
         }
 
         #modal-text {
@@ -170,6 +175,12 @@ header {
   background-image: url("../img/push-pin.jpg");
   background-size: 58px;
   border-radius: 50px;
+  @media only screen and (max-width: 425px) {
+    height: 60%;
+    grid-column: start 8 / 11;
+    background-size: 15px;
+    border-radius: 15px;
+  }
 }
 
 #more-notes {
