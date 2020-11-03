@@ -1,3 +1,5 @@
+// Creating and exporting object model that will be utilized to create the table of Note within our database
+// The Note table will have properties of text, views, and author_id
 module.exports = function(sequelize, DataTypes) {
   var Note = sequelize.define("Note", {
     text: {
@@ -15,5 +17,3 @@ module.exports = function(sequelize, DataTypes) {
   });
   return Note;
 };
-
-// Note.sync();

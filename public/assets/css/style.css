@@ -139,8 +139,6 @@ header {
 }
 
 .total-wrap {
-  /* background-image: linear-gradient(rgb(29, 63, 216, 0.1), rgb(29, 63, 216, 0.3));
-  width: fit-content; */
   background: -webkit-linear-gradient(rgba(21, 64, 255, 0.712), rgba(21, 64, 255, 0.712), rgba(0, 193, 252, 0.3), #00f4fc, rgba(33, 255, 225, 0.712));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
