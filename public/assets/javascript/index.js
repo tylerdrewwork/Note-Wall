@@ -52,26 +52,12 @@ $(document).ready(function() {
 });
 // END OF "RUN ON PAGE LOAD FINISH"
 
-function showNewNoteForm() {
-    // $("#modal-read-wrapper");
-}
-
 function showNote() {
     
     $("#modal-new-wrapper").css("display", "none");
     $("#modal-read-wrapper").css("display", "block");
     
     let noteId = $(this).data("note-id");
-
-    // One of many attempts... I'll leave it in case it's sort of on the right track...
-
-    // let noteViews = $(this.data(""))
-
-    // $.put(`api/notes/${noteID}` function(data) {
-    //     $()
-    // })
-
-    // Also will leave the sequelize method here too:  Note.increment('views', { by: 1, where: { id: 'note' } }); 
     
     $.get(`api/notes/${noteId}`, function(data) {
         
