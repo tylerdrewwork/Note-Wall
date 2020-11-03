@@ -69,20 +69,16 @@ header {
   height: 100%;
   display: grid;
   grid-template-rows: [start] 1fr [body-start] 4fr [body-end] 1fr [end];
-  grid-template-columns: [start] 1fr 1fr 1fr [bottom] 1fr 1fr 1fr [end];
+  grid-template-columns: [start] 1fr 1fr 1fr 1fr 1fr 1fr [bottom] 1fr 1fr 1fr 1fr 1fr [end];
 }
 #modal-wrapper #modal-read #modal-views {
-  grid-column: start 1/4;
+  grid-column: start 1/6;
 }
 #modal-wrapper #modal-read #modal-text {
   grid-row: body-start/body-end;
   grid-column: start/end;
   text-align: center;
   align-self: center;
-}
-#modal-wrapper #modal-read .note-btn-exit {
-  grid-column: start 1/2;
-  border-radius: 25px;
 }
 #modal-wrapper #modal-new {
   height: 100%;
@@ -95,13 +91,16 @@ header {
   grid-column: 1/end;
   grid-row: 1/3;
 }
-#modal-wrapper #modal-new .note-btn-exit {
-  grid-row: 3;
-  grid-column: 1/3;
-}
 #modal-wrapper #modal-new #add-btn {
   grid-row: 3;
   grid-column: 3/5;
+}
+
+.note-btn-exit {
+  grid-column: start 1/2;
+  background-image: url("../img/push-pin.jpg");
+  background-size: 58px;
+  border-radius: 50px;
 }
 
 #more-notes {
