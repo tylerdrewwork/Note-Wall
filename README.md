@@ -1,6 +1,4 @@
 # OFF YOUR CHEST
-![License](https://img.shields.io/badge/LICENSE-none-blue)
-
 https://off-your-chest.herokuapp.com/
 
 ## DESCRIPTION
