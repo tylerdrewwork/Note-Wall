@@ -1,8 +1,7 @@
 # NOTE WALL
 ![License](https://img.shields.io/badge/LICENSE-none-blue)
 
-![gif1](./)
-![gif2](./)
+https://off-your-chest.herokuapp.com/
 
 ## DESCRIPTION
 A digital board to post anonymous notes, appropriate for all sentiments and occasions. Our app provides an online sanctum for safe expression in written form.
