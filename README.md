@@ -6,12 +6,12 @@ A digital board to post anonymous notes, appropriate for all sentiments and occa
 
 
 ## TABLE OF CONTENTS
-  💿 [Installation](#installation) <br>
-  💻[Usage](#usage) <br>
-  📜[License](#license) <br>
-  👥[Contributors](#contributors) <br>
-  🏁[Test](#test) <br>
-  📱 [Contact](#contact)
+  💿  [Installation](#installation) <br>
+  💻  [Usage](#usage) <br>
+  📜  [License](#license) <br>
+  👥  [Contributors](#contributors) <br>
+  🏁  [Test](#test) <br>
+  📱  [Contact](#contact)
 
 ## INSTALLATION
 
@@ -37,10 +37,15 @@ none
 N/A
 
 ## CONTRIBUTORS
-👾Tyler Smith🎮
-🎵Josh Wilson🎤
-👮Jesse Jackson🔎
-🎭Desmond Aldridge🎬
+
+👾 Tyler Smith 🎮
+
+🎵 Josh Wilson 🎤
+
+👮 Jesse Jackson 🔎
+
+🎭 Desmond Aldridge 🎬
+
 <br>
 
 ## CONTACT
